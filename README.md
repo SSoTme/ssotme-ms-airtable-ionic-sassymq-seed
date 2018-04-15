@@ -49,10 +49,11 @@ above, or start with an Empty template and build your own.
 
 2. Copy API Key from Acount Page
 
+6. Make sure you have the latest SSoT.me CLI tools installed.
+
 3. Configure [Airtable.com](https://Airtable.com) API Key in the SSoT.me CLI.
    - This key is passed along with any requests sent to the airtable account tools.
    - At a command line, type `>ssotme -setAccountAPIKey airtable=YOUR_AIRTABLE_API_KEY`
-
 
 4. Find an Airtable Template above to start with
 
@@ -91,8 +92,6 @@ each sheet on the "Entities" tab.  That's the only "rule".
    * This is the line in the original Seed: (~line 100)
         `"CommandLine": "airtable/airtable-to-xml -p baseId=BASE_ID_HERE"`
 
-
-6. Make sure you have the latest SSoT.me CLI tools installed.
 
 6. Run the `ssotme -init`
 
