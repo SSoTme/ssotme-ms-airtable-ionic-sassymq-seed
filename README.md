@@ -34,20 +34,19 @@ Or, for an empty starting project template, use:
 
 ### Create an [Airtable.com](https://Airtable.com) Base
 
-Airtable.com is *by far* the best tool I've found (so far) for describing a Single Source of Truth. 
+Airtable.com is *by far* the best tool I've found for describing a Single Source of Truth. 
 It has all the flexibility of a Spreadsheet + the formal structure of a Database.
 
-There are a list of starter templates above.  You can either pick one of the example templates
-above, or start with an Empty template and build your own.  
+There are a list of starter templates above.  You can either pick one of the example templates, or start with an Empty template and build your own.  
 
 1. Generate an API key on your Airtable.com account
 
    * If you have not already created an API Key - this is how to do it.
-   * Close the airtable to get to the Airtable.com home page.
-   * Click on your account icon in the top right corner of the screen and choose "Account"
+   * From the Airtable.com dashboard, click on your account icon in the top right 
+     corner of the screen and choose "Account"
    * Scroll down and click "Generate Key" to create an API key
 
-2. Copy API Key from Acount Page
+2. Copy API Key from Account Page
 
 6. Make sure you have the latest SSoT.me CLI tools installed.
 
@@ -55,15 +54,15 @@ above, or start with an Empty template and build your own.
    - This key is passed along with any requests sent to the airtable account tools.
    - At a command line, type `>ssotme -setAccountAPIKey airtable=YOUR_AIRTABLE_API_KEY`
 
-4. Find an Airtable Template above to start with
+4. Pick an Airtable Template from above to start with
 
    * Open one of the airtables above and Click *copy base* in the top right corner to create a 
-copy in your own Airtable.com account.
+     copy in your own Airtable.com account.
 
 4. Customize the Airtable
 
    * Just follow the patterns established.  Add as many sheets of data as you want, and simply list 
-each sheet on the "Entities" tab.  That's the only "rule".
+     each sheet on the "Entities" tab.  That's the only "rule".
 
 
 5. Copy BaseID
@@ -122,15 +121,16 @@ The name of the project will be inferred from the name of the folder.
 files which are not automatically included.
 
     - In the visual studio project, open `/MVCRestAPI/Controllers/` and include the `api/*Controller.cs` 
-rest api controllers which are not automatically included in the project when detected.
+rest api controllers which are not automatically included in the project when generated, and must
+be added manually.
 
 ### Run the project
 
-11. Make the `MVCRestAPI` the startup project in the solution.
+1. Make the `MVCRestAPI` the startup project in the solution.
 
-12. Press F5 to run the project.  This will start the REST API.
+2. Press F5 to run the project.  This will start the REST API.
 
-13. in powershell, run `ionic-ts-sidemenu/>ionic serve` to start the Ionic Mobile app.  
+3. in powershell, run `ionic-ts-sidemenu/>ionic serve` to start the Ionic Mobile app.  
 
 ### Et Voila! 
 
