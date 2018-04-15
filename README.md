@@ -17,6 +17,11 @@ Includes:
 Or, for an empty starting project, use: 
  - [An Empty Airtable Template](https://airtable.com/shrGgWOuXXxhZls1c)
 
+#### Airtable Starter Templates
+ - [Event Marketing Template](https://airtable.com/shrJw0zPQDmapQj5C)
+ - [Digital Video Marketing Template](https://airtable.com/shrwlGSftOGR043bh)
+ - [Applicant Tracking Template](https://airtable.com/shr8hvkKEdvms3Ban)
+
 #### Other [Airtable.com](https://Airtable.com) Starter Templates:
 - [IMDB like Template](https://airtable.com/shrBjd3rF6J9oB2Wx)
 - [Simple Company Template](https://airtable.com/shr12ryYJilZGEZuj)
