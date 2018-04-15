@@ -35,7 +35,21 @@ It has all the flexibility of a Spreadsheet + the formal structure of a Database
 There are a list of starter templates above.  You can either pick one of the example templates
 above, or start with an Empty template and build your own.  
 
-1. Copy an Airtable Template above
+4. Generate an API key on your account
+
+   * If you have not already created an API Key - this is how to do it.
+   * Close the airtable to get to the Airtable.com home page.
+   * Click on your account icon in the top right corner of the screen and choose "Account"
+   * Scroll down and click "Generate Key" to create an API key
+
+2. Copy API Key from Acount Page
+
+3. Configure [Airtable.com](https://Airtable.com) API Key in the SSoT.me CLI.
+   - This key is passed along with any requests sent to the airtable account tools.
+   - At a command line, type `>ssotme -setAccountAPIKey airtable=YOUR_AIRTABLE_API_KEY`
+
+
+1. Find an Airtable Template above to start with
 
    * Open one of the airtables above and Click *copy base* in the top right corner to create a 
 copy in your own Airtable.com account.
@@ -45,19 +59,12 @@ copy in your own Airtable.com account.
    * Just follow the patterns established.  Add as many sheets of data as you want, and simply list 
 each sheet on the "Entities" tab.  That's the only "rule".
 
-4. Generate an API key on your account
 
-   * If you have not already created an API Key - this is how to do it.
-   * Close the airtable to get to the Airtable.com home page.
-   * Click on your account icon in the top right corner of the screen and choose "Account"
-   * Scroll down and click "Generate Key" to create an API key
+5. Copy BaseID
 
-5. Copy BaseID and APIKey
-
-   * Open the API Documentation and choose *show API key* in the top right corner.  Copy your 
-airtable base id and api key from the documentation.
-   - https://api.airtable.com/v0/{THIS_IS_THE_BASE_ID}/Roadmap?api_key={THIS_IS_YOUR_API_KEY}
-   - The `baseId` will start *app*XYZ123 and the `apiKey` will start out *key*XYZ123.
+   * Open the API Documentation from the Help Menu in the top right corner.
+   - https://api.airtable.com/v0/{THIS_IS_THE_BASE_ID}/TableName
+   - The `Base ID` will start `app...`
 
 ### Fork and Clone this Repo
 
@@ -75,8 +82,10 @@ airtable base id and api key from the documentation.
 
 5. Add Base ID and API key from Above.
 
-   * Update the "SSoTmeProject.json" file in the root folder to add your
-Base ID and API Key copied above.
+   * Update the "SSoTmeProject.json" file with the Base ID you copied above
+   * This is the line in the original Seed:
+        `"CommandLine": "airtable/airtable-to-xml -p baseId=BASE_ID_HERE"`
+
 
 6. Make sure you have the latest SSoT.me CLI tools installed.
 
@@ -93,8 +102,8 @@ The name of the project will be inferred from the name of the folder.
 
 8. Download Packages & Build Ionic Mobile App
 
-   * Move into the `/ionic-ts-sidemenu/` folder and type `>prepare-ionic.bat` to 
-start the ionic project downloading npm packages and building the mobile app.
+   * Execute `/ionic-ts-sidemenu/>prepare-ionic.bat` to start the ionic project downloading 
+        npm packages and building the mobile app.
 
 1. Create Sql Server DB
 
