@@ -14,7 +14,7 @@ Includes:
  - App States
  - Settings
 
-Or, for an empty starting project, use: 
+Or, for an empty starting project template, use: 
  - [An Empty Airtable Template](https://airtable.com/shrGgWOuXXxhZls1c)
 
 #### Airtable Starter Templates
@@ -40,7 +40,7 @@ It has all the flexibility of a Spreadsheet + the formal structure of a Database
 There are a list of starter templates above.  You can either pick one of the example templates
 above, or start with an Empty template and build your own.  
 
-4. Generate an API key on your account
+1. Generate an API key on your Airtable.com account
 
    * If you have not already created an API Key - this is how to do it.
    * Close the airtable to get to the Airtable.com home page.
@@ -54,7 +54,7 @@ above, or start with an Empty template and build your own.
    - At a command line, type `>ssotme -setAccountAPIKey airtable=YOUR_AIRTABLE_API_KEY`
 
 
-1. Find an Airtable Template above to start with
+4. Find an Airtable Template above to start with
 
    * Open one of the airtables above and Click *copy base* in the top right corner to create a 
 copy in your own Airtable.com account.
@@ -85,10 +85,10 @@ each sheet on the "Entities" tab.  That's the only "rule".
 
    * Clone the repo to a folder on your local computer.
 
-5. Add Base ID and API key from Above.
+5. Add Base ID to the SSoT.me Project File
 
    * Update the "SSoTmeProject.json" file with the Base ID you copied above
-   * This is the line in the original Seed:
+   * This is the line in the original Seed: (~line 100)
         `"CommandLine": "airtable/airtable-to-xml -p baseId=BASE_ID_HERE"`
 
 
