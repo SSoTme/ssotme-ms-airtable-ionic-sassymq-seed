@@ -58,7 +58,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "5976f2fd-1ed2-4b53-af9f-5a8cc3b2ff64",
+          "FileSetId": "3bfcd735-9be0-4568-8d41-0ec28c9053b0",
           "FileSetFiles": []
         },
         "HasRemainingArguments": true,
@@ -83,7 +83,8 @@
         "account": "airtable",
         "parameters": [
           "baseId=BASE_ID_HERE",
-          "project-name=HomeworkPlus"
+          "project-name=HomeworkPlus",
+          "apiKey=keyVTPXpHrersaFEG"
         ],
         "listSettings": false,
         "addSetting": [],
@@ -101,7 +102,10 @@
         "execute": null,
         "includeDisabled": false,
         "projectName": null,
-        "transpilerGroup": null
+        "transpilerGroup": null,
+        "setAccountAPIKey": null,
+        "authenticate": false,
+        "register": false
       },
       "ProjectTranspilerId": "8d26e7b0-88ac-4839-8233-7f4605681a65",
       "Name": "AirtableToXml",
@@ -110,33 +114,30 @@
     },
     {
       "MatchedTranspiler": {
-        "TranspilerId": "4b713f03-1d9f-42f2-b02f-e3cdbd237bb3",
-        "AccountHolderId": "1e876e4f-d63b-4698-bd68-3bc27876e41e",
-        "Name": "XmlXsltTransform",
-        "DisplayName": "Xml Xslt Transform",
-        "Description": "Given an Xml and Xslt file, will process and \"split\" a resulting fileset.",
-        "CreatedOn": "2017-08-30T15:45:09.907",
+        "TranspilerId": "8defe7a3-89cf-4989-b679-d9226519f622",
+        "AccountHolderId": "9aeb4f89-3c90-4972-927c-7deebfbb9de4",
+        "Name": "OdxmlToNodeJSDocs",
+        "DisplayName": "Odxml To Node J S Docs",
+        "Description": "Creates easy to read/navigate html documentation for an Odxml Schema.",
+        "CreatedOn": "2017-08-29T21:18:01.293",
         "IsActive": true,
-        "CurrentRoutingKey": "amq.gen-pwRUdyqwEq8fPN8gkK7ADg",
-        "LowerName": "xmlxslttransform",
-        "UpperName": "XMLXSLTTRANSFORM",
-        "LowerHyphenName": "xml-xslt-transform",
-        "ReadMeMD": "The tool processes the first text file it finds (which is presumed to be in xml format), with the first Xslt file provided, and includes any parameters that are passed to ssotme as well.\r\n\r\nThe output is expected to be a FileSet Xml blob with the results of the transform.",
-        "InputDescriptionMD": "At least 1 input Xml file, An Xslt file to use for the Transform operation and any additional parameters that the Xslt file uses for it's transpiling functionality.  These could be options, values, namespaces, etc.",
-        "OutputDescriptionMD": "A fileset with the result of the Xslt transform, usually including at least 1 or more files.  The example command might produce an HTML Document that describes (in english) the contents of the Xml file.  Essentially a \"report\" about the xml file. ",
-        "ExampleMD": "ssotme -install xml-xslt-transform -i MyData.xml -i CreateDocs.xslt",
-        "InputFileTypeId": "f1b92a2a-3f83-4000-9b37-57f920e14419",
-        "OutputFileTypeId": "952e47eb-3448-4627-8dc4-93dab494c957",
-        "Category": "type-conversion",
+        "CurrentRoutingKey": "amq.gen-038mgzT3ATTpDx-Ekoww0w",
+        "LowerName": "odxmltonodejsdocs",
+        "UpperName": "ODXMLTONODEJSDOCS",
+        "LowerHyphenName": "odxml-to-node-j-s-docs",
+        "ReadMeMD": "Examines the schema defined by an Odxml file and creates an interactive DataModel explorer for exploring the structure of the data model defined. \r\n\r\nCreates both a single page version of the docs, as well as a Node.JS website that can be started on demand to explore the data model more interactively.",
+        "InputFileTypeId": "33de424c-cfe0-498e-ae70-44da375a8fb2",
+        "OutputFileTypeId": "d8fc84b7-442d-4c7a-92a0-eefc11391934",
+        "Category": "documentation",
         "IsRecommended": true,
         "TranspileRequests": [],
         "TranspilerInstances": [],
         "TranspilerVersions": [
           {
-            "TranspilerVersionId": "7e941388-752b-4b0f-9631-939b790be10f",
-            "TranspilerId": "4b713f03-1d9f-42f2-b02f-e3cdbd237bb3",
+            "TranspilerVersionId": "26af4ad8-fb5d-4027-8e4b-2260c62f3f24",
+            "TranspilerId": "8defe7a3-89cf-4989-b679-d9226519f622",
             "Name": "v1",
-            "CreatedOn": "2017-08-30T15:45:10.653",
+            "CreatedOn": "2017-08-29T21:18:03.463",
             "IsActive": true,
             "TranspilerFileTypeId_TranspilerInputHints": [],
             "TranspilerInstances": [],
@@ -146,18 +147,18 @@
       },
       "CLIHandler": {
         "inputFileContents": null,
-        "transpiler": "xml-xslt-transform",
+        "transpiler": "odxml-to-nodejs-docs",
         "inputFileSetXml": "",
         "args": null,
-        "commandLine": "xml-xslt-transform -i .\\CreateDefaultFiles.xslt",
+        "commandLine": "odxml42/odxml-to-nodejs-docs -i ..\\ODXML\\DataSchema.odxml",
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "db238677-f3b5-445f-83c1-aa464fb8ef6a",
+          "FileSetId": "62386132-0235-4b51-a6b7-0805f25116a2",
           "FileSetFiles": [
             {
-              "OriginalRelativePath": "/CustomTools/CreateDefaultFiles.xslt",
-              "RelativePath": "CreateDefaultFiles.xslt"
+              "OriginalRelativePath": null,
+              "RelativePath": "DataSchema.odxml"
             }
           ]
         },
@@ -176,13 +177,13 @@
         "describe": false,
         "descibeAll": false,
         "input": [
-          ".\\CreateDefaultFiles.xslt"
+          "..\\ODXML\\DataSchema.odxml"
         ],
         "output": null,
         "clean": false,
         "cleanAll": false,
         "skipClean": false,
-        "account": "",
+        "account": "odxml42",
         "parameters": [
           "project-name=HomeworkPlus"
         ],
@@ -202,12 +203,15 @@
         "execute": null,
         "includeDisabled": false,
         "projectName": null,
-        "transpilerGroup": null
+        "transpilerGroup": null,
+        "setAccountAPIKey": null,
+        "authenticate": false,
+        "register": false
       },
-      "ProjectTranspilerId": "1a2b18ff-c654-4752-9a20-4d05cebb4687",
-      "Name": "XmlXsltTransform",
-      "RelativePath": "/CustomTools",
-      "CommandLine": "xml-xslt-transform -i .\\CreateDefaultFiles.xslt"
+      "ProjectTranspilerId": "37fbd3d2-b5e6-45a3-8c7a-b3823d0c7960",
+      "Name": "OdxmlToNodeJSDocs",
+      "RelativePath": "/Docs",
+      "CommandLine": "odxml42/odxml-to-nodejs-docs -i ..\\ODXML\\DataSchema.odxml"
     },
     {
       "MatchedTranspiler": {
@@ -249,7 +253,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "25035e04-6b3f-47b8-a695-3e116459a026",
+          "FileSetId": "a900a1c6-85f0-4c0f-9121-cd88b77ffbc4",
           "FileSetFiles": [
             {
               "OriginalRelativePath": null,
@@ -280,7 +284,8 @@
         "skipClean": false,
         "account": "airtable",
         "parameters": [
-          "project-name=HomeworkPlus"
+          "project-name=HomeworkPlus",
+          "apiKey=keyVTPXpHrersaFEG"
         ],
         "listSettings": false,
         "addSetting": [],
@@ -298,112 +303,15 @@
         "execute": null,
         "includeDisabled": false,
         "projectName": null,
-        "transpilerGroup": null
+        "transpilerGroup": null,
+        "setAccountAPIKey": null,
+        "authenticate": false,
+        "register": false
       },
       "ProjectTranspilerId": "ae41d6af-9829-4ff5-9109-6bfd0551a051",
       "Name": "AirtableXmlToOdxml",
       "RelativePath": "/ODXML",
       "CommandLine": "airtable/airtable-xml-to-odxml -i ..\\SSoT\\Airtable.xml -o DataSchema.odxml"
-    },
-    {
-      "MatchedTranspiler": {
-        "TranspilerId": "cbd4068e-573f-48f4-bce8-e1fe6383ce1d",
-        "AccountHolderId": "1e876e4f-d63b-4698-bd68-3bc27876e41e",
-        "Name": "XlsxToCSVs",
-        "DisplayName": "Xlsx To C S Vs",
-        "Description": "Converts an Xllsx file into one (or more) CSV files for each tab.",
-        "CreatedOn": "2017-10-06T16:52:02.81",
-        "IsActive": true,
-        "CurrentRoutingKey": "amq.gen-8TtEDAfioYVWKYvAj7MBtA",
-        "LowerName": "xlsxtocsvs",
-        "UpperName": "XLSXTOCSVS",
-        "LowerHyphenName": "xlsx-to-c-s-vs",
-        "ReadMeMD": "One CSV file is created for each \"tab\" in the spreadsheet.",
-        "InputDescriptionMD": "-p overwrite=false\r\n\r\nwill cause it to write the csvs once, but then never overwrite them.",
-        "InputFileTypeId": "39d3bcd1-d89f-4361-a3f7-7d5c295132cd",
-        "OutputFileTypeId": "2b02094e-3b80-4a07-8db2-0c2f38d44328",
-        "Category": "type-conversion",
-        "IsRecommended": true,
-        "TranspileRequests": [],
-        "TranspilerInstances": [],
-        "TranspilerVersions": [
-          {
-            "TranspilerVersionId": "f313995e-9f38-4b36-856c-df8f73dd38bc",
-            "TranspilerId": "cbd4068e-573f-48f4-bce8-e1fe6383ce1d",
-            "Name": "v1",
-            "CreatedOn": "2017-10-06T16:52:11.6",
-            "IsActive": true,
-            "TranspilerFileTypeId_TranspilerInputHints": [],
-            "TranspilerInstances": [],
-            "ReplacedByTranspilerVersionId_TranspilerVersions": []
-          }
-        ]
-      },
-      "CLIHandler": {
-        "inputFileContents": null,
-        "transpiler": "xlsx-to-csvs",
-        "inputFileSetXml": "",
-        "args": null,
-        "commandLine": "xlsx-to-csvs -i ..\\..\\SSoT\\ProjectLexicon.xlsx -p overwrite=true",
-        "AccountHolder": null,
-        "CoordinatorProxy": null,
-        "FileSet": {
-          "FileSetId": "232eb117-6b4b-4664-8545-f7276fc3e7ca",
-          "FileSetFiles": [
-            {
-              "OriginalRelativePath": "/SSoT/ProjectLexicon.xlsx",
-              "RelativePath": "ProjectLexicon.xlsx"
-            }
-          ]
-        },
-        "HasRemainingArguments": true,
-        "ZFSFileSetFile": null,
-        "SSoTmeProject": null,
-        "ParseResult": 0,
-        "OutputFileSet": null,
-        "SuppressTranspile": false,
-        "help": false,
-        "init": false,
-        "install": false,
-        "uninstall": false,
-        "build": false,
-        "buildAll": false,
-        "describe": false,
-        "descibeAll": false,
-        "input": [
-          "..\\..\\SSoT\\ProjectLexicon.xlsx"
-        ],
-        "output": null,
-        "clean": false,
-        "cleanAll": false,
-        "skipClean": false,
-        "account": "",
-        "parameters": [
-          "overwrite=true",
-          "project-name=HomeworkPlus"
-        ],
-        "listSettings": false,
-        "addSetting": [],
-        "removeSetting": [],
-        "keyFile": null,
-        "emailAddress": null,
-        "secret": null,
-        "addTranspiler": null,
-        "deleteTranspiler": null,
-        "waitTimeout": 30000,
-        "runAs": null,
-        "preserveZFS": false,
-        "checkResults": false,
-        "createDocs": false,
-        "execute": null,
-        "includeDisabled": false,
-        "projectName": null,
-        "transpilerGroup": null
-      },
-      "ProjectTranspilerId": "f2ae4577-9e04-4f10-b80d-7d61b4f33739",
-      "Name": "XlsxToCSVs",
-      "RelativePath": "/SassyMQ/LexiconCSVs",
-      "CommandLine": "xlsx-to-csvs -i ..\\..\\SSoT\\ProjectLexicon.xlsx -p overwrite=true"
     },
     {
       "MatchedTranspiler": {
@@ -438,18 +346,18 @@
       },
       "CLIHandler": {
         "inputFileContents": null,
-        "transpiler": "csv-to-smql",
+        "transpiler": "xml-to-smql",
         "inputFileSetXml": "",
         "args": null,
-        "commandLine": "sassymq/csv-to-smql -i .\\LexiconCSVs\\SassyMQLexicon.csv",
+        "commandLine": "sassymq/xml-to-smql -i ..\\SSoT\\Airtable.xml -p \"project-acronym=XYZ\"",
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "df2d0b63-4705-485e-b119-6e87b6da4e21",
+          "FileSetId": "9cb62f18-b068-448d-9854-ae7181684475",
           "FileSetFiles": [
             {
               "OriginalRelativePath": null,
-              "RelativePath": "SassyMQLexicon.csv"
+              "RelativePath": "Airtable.xml"
             }
           ]
         },
@@ -468,7 +376,108 @@
         "describe": false,
         "descibeAll": false,
         "input": [
-          ".\\LexiconCSVs\\SassyMQLexicon.csv"
+          "..\\SSoT\\Airtable.xml"
+        ],
+        "output": null,
+        "clean": false,
+        "cleanAll": false,
+        "skipClean": false,
+        "account": "sassymq",
+        "parameters": [
+          "project-acronym=XYZ",
+          "project-name=HomeworkPlus"
+        ],
+        "listSettings": false,
+        "addSetting": [],
+        "removeSetting": [],
+        "keyFile": null,
+        "emailAddress": null,
+        "secret": null,
+        "addTranspiler": null,
+        "deleteTranspiler": null,
+        "waitTimeout": 30000,
+        "runAs": null,
+        "preserveZFS": false,
+        "checkResults": false,
+        "createDocs": false,
+        "execute": null,
+        "includeDisabled": false,
+        "projectName": null,
+        "transpilerGroup": null,
+        "setAccountAPIKey": null,
+        "authenticate": false,
+        "register": false
+      },
+      "ProjectTranspilerId": "817c7574-d643-44d5-8fa1-9f6a786631b7",
+      "Name": "CsvToSmql",
+      "RelativePath": "/SassyMQ",
+      "CommandLine": "sassymq/xml-to-smql -i ..\\SSoT\\Airtable.xml -p \"project-acronym=XYZ\""
+    },
+    {
+      "MatchedTranspiler": {
+        "TranspilerId": "69a746d2-c0b1-4467-a020-9dd12b8bc098",
+        "Name": "SmqlToDocs",
+        "DisplayName": "Smql To Docs",
+        "Description": "Converts an Smql file into documentation.",
+        "CreatedOn": "2017-09-16T22:24:50.93",
+        "IsActive": true,
+        "CurrentRoutingKey": "amq.gen-SO2KYSw3nYNV1LPUOAPf8w",
+        "LowerName": "smqltodocs",
+        "UpperName": "SMQLTODOCS",
+        "LowerHyphenName": "smql-to-docs",
+        "ExampleMD": "ssotme sassymq/SmqlToDocs -i .\\HelloWorld.smql",
+        "InputFileTypeId": "87c1c579-ea4f-47db-a064-f26f9ca1d91e",
+        "OutputFileTypeId": "d8fc84b7-442d-4c7a-92a0-eefc11391934",
+        "Category": "sassymq",
+        "IsRecommended": true,
+        "TranspileRequests": [],
+        "TranspilerInstances": [],
+        "TranspilerVersions": [
+          {
+            "TranspilerVersionId": "ea02027b-b8a4-4d73-ab46-c7d722c0cc38",
+            "TranspilerId": "69a746d2-c0b1-4467-a020-9dd12b8bc098",
+            "Name": "v1",
+            "CreatedOn": "2017-09-16T22:25:01.583",
+            "IsActive": true,
+            "TranspilerFileTypeId_TranspilerInputHints": [],
+            "TranspilerInstances": [],
+            "ReplacedByTranspilerVersionId_TranspilerVersions": []
+          }
+        ]
+      },
+      "CLIHandler": {
+        "inputFileContents": null,
+        "transpiler": "smql-to-docs",
+        "inputFileSetXml": "",
+        "args": null,
+        "commandLine": "sassymq/smql-to-docs -i ..\\SassyMQLexicon.smql",
+        "AccountHolder": null,
+        "CoordinatorProxy": null,
+        "FileSet": {
+          "FileSetId": "88aeac13-691b-422b-ba53-a5b634d4ebb9",
+          "FileSetFiles": [
+            {
+              "OriginalRelativePath": null,
+              "RelativePath": "SassyMQLexicon.smql"
+            }
+          ]
+        },
+        "HasRemainingArguments": true,
+        "ZFSFileSetFile": null,
+        "SSoTmeProject": null,
+        "ParseResult": 0,
+        "OutputFileSet": null,
+        "SuppressTranspile": false,
+        "help": false,
+        "init": false,
+        "install": false,
+        "uninstall": false,
+        "build": false,
+        "buildAll": false,
+        "describe": false,
+        "descibeAll": false,
+        "input": [
+          "..\\SassyMQLexicon.smql"
         ],
         "output": null,
         "clean": false,
@@ -494,12 +503,15 @@
         "execute": null,
         "includeDisabled": false,
         "projectName": null,
-        "transpilerGroup": null
+        "transpilerGroup": null,
+        "setAccountAPIKey": null,
+        "authenticate": false,
+        "register": false
       },
-      "ProjectTranspilerId": "817c7574-d643-44d5-8fa1-9f6a786631b7",
-      "Name": "CsvToSmql",
-      "RelativePath": "/SassyMQ",
-      "CommandLine": "sassymq/csv-to-smql -i .\\LexiconCSVs\\SassyMQLexicon.csv"
+      "ProjectTranspilerId": "3249face-0994-46fd-a189-6ea68850fd00",
+      "Name": "SmqlToDocs",
+      "RelativePath": "/SassyMQ/Docs",
+      "CommandLine": "sassymq/smql-to-docs -i ..\\SassyMQLexicon.smql"
     },
     {
       "MatchedTranspiler": {
@@ -542,7 +554,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "9f2c10aa-2b3c-4467-a9c6-bea60ebe545e",
+          "FileSetId": "89d970ad-f117-4f92-b74c-34c51af16ac0",
           "FileSetFiles": [
             {
               "OriginalRelativePath": null,
@@ -591,12 +603,230 @@
         "execute": null,
         "includeDisabled": false,
         "projectName": null,
-        "transpilerGroup": null
+        "transpilerGroup": null,
+        "setAccountAPIKey": null,
+        "authenticate": false,
+        "register": false
       },
       "ProjectTranspilerId": "ce1207c3-72fb-444c-b579-5a7cfd3ebac7",
       "Name": "OdxmlToSqlServerCreateDb",
       "RelativePath": "/SqlServer",
       "CommandLine": "odxml42/odxml-to-sql-server-createdb -i ..\\ODXML\\DataSchema.odxml -o UpdateSchema.sql"
+    },
+    {
+      "MatchedTranspiler": {
+        "TranspilerId": "1cbd15d4-18df-47a8-8a08-83d9544baa11",
+        "AccountHolderId": "c2bb89f9-26da-4ebf-9d35-0c4547eb89e2",
+        "Name": "AirtableXmlToSqlServerUpsert",
+        "DisplayName": "Airtable Xml To Sql Server Upsert",
+        "Description": "Creates a SQL Server script to update/insert data (or static data) from the airtable db.",
+        "CreatedOn": "2018-04-12T21:36:05.25",
+        "IsActive": true,
+        "CurrentRoutingKey": "",
+        "LowerName": "airtablexmltosqlserverupsert",
+        "UpperName": "AIRTABLEXMLTOSQLSERVERUPSERT",
+        "LowerHyphenName": "airtable-xml-to-sql-server-upsert",
+        "InputDescriptionMD": "-p only-static-table=true\r\n   to only include entities marked as IsStaticData",
+        "InputFileTypeId": "8c1bfcc6-a4de-4604-b785-9aa677c5302a",
+        "OutputFileTypeId": "1136a8fc-7ced-47c2-b08d-1ff447a82b01",
+        "TranspileRequests": [],
+        "TranspilerInstances": [],
+        "TranspilerVersions": [
+          {
+            "TranspilerVersionId": "928d5e06-9cc1-4ad4-ab67-5998a63bf68e",
+            "TranspilerId": "1cbd15d4-18df-47a8-8a08-83d9544baa11",
+            "Name": "v1",
+            "CreatedOn": "2018-04-12T21:36:07.233",
+            "IsActive": true,
+            "TranspilerFileTypeId_TranspilerInputHints": [],
+            "TranspilerInstances": [],
+            "ReplacedByTranspilerVersionId_TranspilerVersions": []
+          }
+        ]
+      },
+      "CLIHandler": {
+        "inputFileContents": null,
+        "transpiler": "airtable-xml-to-sql-server-upsert",
+        "inputFileSetXml": "",
+        "args": null,
+        "commandLine": "airtable/airtable-xml-to-sql-server-upsert -i ..\\SSoT\\Airtable.xml -i ..\\ODXML\\DataSchema.odxml",
+        "AccountHolder": null,
+        "CoordinatorProxy": null,
+        "FileSet": {
+          "FileSetId": "221a7ceb-b854-425d-98c2-3111d09cbbf4",
+          "FileSetFiles": [
+            {
+              "OriginalRelativePath": null,
+              "RelativePath": "Airtable.xml"
+            },
+            {
+              "OriginalRelativePath": null,
+              "RelativePath": "DataSchema.odxml"
+            }
+          ]
+        },
+        "HasRemainingArguments": true,
+        "ZFSFileSetFile": null,
+        "SSoTmeProject": null,
+        "ParseResult": 0,
+        "OutputFileSet": {
+          "FileSetId": "c55c10e6-e5aa-4caa-930c-857216d36be8",
+          "FileSetFiles": [
+            {
+              "OriginalRelativePath": "SqlServer/UpsertStaticData.sql",
+              "RelativePath": "UpsertStaticData.sql",
+              "AlwaysOverwrite": true
+            }
+          ]
+        },
+        "SuppressTranspile": false,
+        "help": false,
+        "init": false,
+        "install": false,
+        "uninstall": false,
+        "build": false,
+        "buildAll": false,
+        "describe": false,
+        "descibeAll": false,
+        "input": [
+          "..\\SSoT\\Airtable.xml",
+          "..\\ODXML\\DataSchema.odxml"
+        ],
+        "output": null,
+        "clean": false,
+        "cleanAll": false,
+        "skipClean": false,
+        "account": "airtable",
+        "parameters": [
+          "project-name=HomeworkPlus",
+          "apiKey=keyVTPXpHrersaFEG"
+        ],
+        "listSettings": false,
+        "addSetting": [],
+        "removeSetting": [],
+        "keyFile": null,
+        "emailAddress": null,
+        "secret": null,
+        "addTranspiler": null,
+        "deleteTranspiler": null,
+        "waitTimeout": 30000,
+        "runAs": null,
+        "preserveZFS": false,
+        "checkResults": false,
+        "createDocs": false,
+        "execute": null,
+        "includeDisabled": false,
+        "projectName": null,
+        "transpilerGroup": null,
+        "setAccountAPIKey": null,
+        "authenticate": false,
+        "register": false
+      },
+      "ProjectTranspilerId": "a67640a3-4195-4098-a40d-11f47a13befe",
+      "Name": "AirtableXmlToSqlServerUpsert",
+      "RelativePath": "/SqlServer",
+      "CommandLine": "airtable/airtable-xml-to-sql-server-upsert -i ..\\SSoT\\Airtable.xml -i ..\\ODXML\\DataSchema.odxml"
+    },
+    {
+      "MatchedTranspiler": {
+        "TranspilerId": "ee1dc0b2-dc87-4e0f-bcb1-ade46b09de41",
+        "AccountHolderId": "9aeb4f89-3c90-4972-927c-7deebfbb9de4",
+        "Name": "OdxmlToPostmanJson",
+        "DisplayName": "Odxml To Postman Json",
+        "Description": "Odxml To Postman Json",
+        "CreatedOn": "2017-11-27T02:50:26.217",
+        "IsActive": true,
+        "CurrentRoutingKey": "amq.gen-038mgzT3ATTpDx-Ekoww0w",
+        "LowerName": "odxmltopostmanjson",
+        "UpperName": "ODXMLTOPOSTMANJSON",
+        "LowerHyphenName": "odxml-to-postman-json",
+        "ReadMeMD": "Creates a REST Api Requests in a format ready to imported into Postman.",
+        "InputDescriptionMD": "param name=\"project-name\" select=\"'REST Collection'\"  \r\nparam name=\"api-uri\" select=\"'http://localhost:64110/api/'\"\r\n",
+        "InputFileTypeId": "33de424c-cfe0-498e-ae70-44da375a8fb2",
+        "OutputFileTypeId": "e827499f-f215-4b35-8dae-6bd423a75e4c",
+        "TranspileRequests": [],
+        "TranspilerInstances": [],
+        "TranspilerVersions": [
+          {
+            "TranspilerVersionId": "2f392ff2-3095-4932-8793-b518eeedf41e",
+            "TranspilerId": "ee1dc0b2-dc87-4e0f-bcb1-ade46b09de41",
+            "Name": "v1",
+            "CreatedOn": "2017-11-27T02:50:47.877",
+            "IsActive": true,
+            "TranspilerFileTypeId_TranspilerInputHints": [],
+            "TranspilerInstances": [],
+            "ReplacedByTranspilerVersionId_TranspilerVersions": []
+          }
+        ]
+      },
+      "CLIHandler": {
+        "inputFileContents": null,
+        "transpiler": "odxml-to-postman-json",
+        "inputFileSetXml": "",
+        "args": null,
+        "commandLine": "odxml42/odxml-to-postman-json -i ..\\ODXML\\DataSchema.odxml -p api-uri=http://localhost:64110/api",
+        "AccountHolder": null,
+        "CoordinatorProxy": null,
+        "FileSet": {
+          "FileSetId": "469dab62-e29e-4458-a0d1-dc12e5cf9f88",
+          "FileSetFiles": [
+            {
+              "OriginalRelativePath": null,
+              "RelativePath": "DataSchema.odxml"
+            }
+          ]
+        },
+        "HasRemainingArguments": true,
+        "ZFSFileSetFile": null,
+        "SSoTmeProject": null,
+        "ParseResult": 0,
+        "OutputFileSet": null,
+        "SuppressTranspile": false,
+        "help": false,
+        "init": false,
+        "install": false,
+        "uninstall": false,
+        "build": false,
+        "buildAll": false,
+        "describe": false,
+        "descibeAll": false,
+        "input": [
+          "..\\ODXML\\DataSchema.odxml"
+        ],
+        "output": null,
+        "clean": false,
+        "cleanAll": false,
+        "skipClean": false,
+        "account": "odxml42",
+        "parameters": [
+          "api-uri=http://localhost:64110/api",
+          "project-name=HomeworkPlus"
+        ],
+        "listSettings": false,
+        "addSetting": [],
+        "removeSetting": [],
+        "keyFile": null,
+        "emailAddress": null,
+        "secret": null,
+        "addTranspiler": null,
+        "deleteTranspiler": null,
+        "waitTimeout": 30000,
+        "runAs": null,
+        "preserveZFS": false,
+        "checkResults": false,
+        "createDocs": false,
+        "execute": null,
+        "includeDisabled": false,
+        "projectName": null,
+        "transpilerGroup": null,
+        "setAccountAPIKey": null,
+        "authenticate": false,
+        "register": false
+      },
+      "ProjectTranspilerId": "fc24e1c5-23bf-437c-bb9c-99ad3250971f",
+      "Name": "OdxmlToPostmanJson",
+      "RelativePath": "/PostMan",
+      "CommandLine": "odxml42/odxml-to-postman-json -i ..\\ODXML\\DataSchema.odxml -p api-uri=http://localhost:64110/api"
     },
     {
       "MatchedTranspiler": {
@@ -641,7 +871,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "dbed7cab-dfe5-4623-9907-e4e5fac24421",
+          "FileSetId": "2e08d2bf-9cf7-4559-ad11-2c18223fedf2",
           "FileSetFiles": [
             {
               "OriginalRelativePath": null,
@@ -695,110 +925,15 @@
         "execute": null,
         "includeDisabled": false,
         "projectName": null,
-        "transpilerGroup": null
+        "transpilerGroup": null,
+        "setAccountAPIKey": null,
+        "authenticate": false,
+        "register": false
       },
       "ProjectTranspilerId": "3bd76ce1-4eed-4042-8a03-514eedd1e4f6",
       "Name": "AppStatesCsvToAppStatesXml",
       "RelativePath": "/SSoT",
       "CommandLine": "app-states-csv-to-app-states-xml -i .\\AppStates.csv  -i ..\\ODXML\\DataSchema.odxml"
-    },
-    {
-      "MatchedTranspiler": {
-        "TranspilerId": "8defe7a3-89cf-4989-b679-d9226519f622",
-        "AccountHolderId": "9aeb4f89-3c90-4972-927c-7deebfbb9de4",
-        "Name": "OdxmlToNodeJSDocs",
-        "DisplayName": "Odxml To Node J S Docs",
-        "Description": "Creates easy to read/navigate html documentation for an Odxml Schema.",
-        "CreatedOn": "2017-08-29T21:18:01.293",
-        "IsActive": true,
-        "CurrentRoutingKey": "amq.gen-038mgzT3ATTpDx-Ekoww0w",
-        "LowerName": "odxmltonodejsdocs",
-        "UpperName": "ODXMLTONODEJSDOCS",
-        "LowerHyphenName": "odxml-to-node-j-s-docs",
-        "ReadMeMD": "Examines the schema defined by an Odxml file and creates an interactive DataModel explorer for exploring the structure of the data model defined. \r\n\r\nCreates both a single page version of the docs, as well as a Node.JS website that can be started on demand to explore the data model more interactively.",
-        "InputFileTypeId": "33de424c-cfe0-498e-ae70-44da375a8fb2",
-        "OutputFileTypeId": "d8fc84b7-442d-4c7a-92a0-eefc11391934",
-        "Category": "documentation",
-        "IsRecommended": true,
-        "TranspileRequests": [],
-        "TranspilerInstances": [],
-        "TranspilerVersions": [
-          {
-            "TranspilerVersionId": "26af4ad8-fb5d-4027-8e4b-2260c62f3f24",
-            "TranspilerId": "8defe7a3-89cf-4989-b679-d9226519f622",
-            "Name": "v1",
-            "CreatedOn": "2017-08-29T21:18:03.463",
-            "IsActive": true,
-            "TranspilerFileTypeId_TranspilerInputHints": [],
-            "TranspilerInstances": [],
-            "ReplacedByTranspilerVersionId_TranspilerVersions": []
-          }
-        ]
-      },
-      "CLIHandler": {
-        "inputFileContents": null,
-        "transpiler": "odxml-to-nodejs-docs",
-        "inputFileSetXml": "",
-        "args": null,
-        "commandLine": "odxml42/odxml-to-nodejs-docs -i ..\\ODXML\\DataSchema.odxml",
-        "AccountHolder": null,
-        "CoordinatorProxy": null,
-        "FileSet": {
-          "FileSetId": "4023c92a-e41d-4d07-9e4d-fde0a45c490e",
-          "FileSetFiles": [
-            {
-              "OriginalRelativePath": null,
-              "RelativePath": "DataSchema.odxml"
-            }
-          ]
-        },
-        "HasRemainingArguments": true,
-        "ZFSFileSetFile": null,
-        "SSoTmeProject": null,
-        "ParseResult": 0,
-        "OutputFileSet": null,
-        "SuppressTranspile": false,
-        "help": false,
-        "init": false,
-        "install": false,
-        "uninstall": false,
-        "build": false,
-        "buildAll": false,
-        "describe": false,
-        "descibeAll": false,
-        "input": [
-          "..\\ODXML\\DataSchema.odxml"
-        ],
-        "output": null,
-        "clean": false,
-        "cleanAll": false,
-        "skipClean": false,
-        "account": "odxml42",
-        "parameters": [
-          "project-name=HomeworkPlus"
-        ],
-        "listSettings": false,
-        "addSetting": [],
-        "removeSetting": [],
-        "keyFile": null,
-        "emailAddress": null,
-        "secret": null,
-        "addTranspiler": null,
-        "deleteTranspiler": null,
-        "waitTimeout": 30000,
-        "runAs": null,
-        "preserveZFS": false,
-        "checkResults": false,
-        "createDocs": false,
-        "execute": null,
-        "includeDisabled": false,
-        "projectName": null,
-        "transpilerGroup": null
-      },
-      "ProjectTranspilerId": "37fbd3d2-b5e6-45a3-8c7a-b3823d0c7960",
-      "Name": "OdxmlToNodeJSDocs",
-      "RelativePath": "/Docs",
-      "CommandLine": "odxml42/odxml-to-nodejs-docs -i ..\\ODXML\\DataSchema.odxml"
     },
     {
       "MatchedTranspiler": {
@@ -841,7 +976,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "c8b5a3ae-309d-4344-aeea-cdb98162ab73",
+          "FileSetId": "df443c53-f4e2-4839-a839-c1c66ef0511c",
           "FileSetFiles": [
             {
               "OriginalRelativePath": null,
@@ -890,110 +1025,15 @@
         "execute": null,
         "includeDisabled": false,
         "projectName": null,
-        "transpilerGroup": null
+        "transpilerGroup": null,
+        "setAccountAPIKey": null,
+        "authenticate": false,
+        "register": false
       },
       "ProjectTranspilerId": "9733804e-96c9-49cf-a362-3f1ad57a1d70",
       "Name": "AppStatesXmlToAppStatesDocs",
       "RelativePath": "/docs/appStates",
       "CommandLine": "app-states-xml-to-app-states-docs -i ..\\..\\SSoT\\AppStates.xml"
-    },
-    {
-      "MatchedTranspiler": {
-        "TranspilerId": "ee1dc0b2-dc87-4e0f-bcb1-ade46b09de41",
-        "AccountHolderId": "9aeb4f89-3c90-4972-927c-7deebfbb9de4",
-        "Name": "OdxmlToPostmanJson",
-        "DisplayName": "Odxml To Postman Json",
-        "Description": "Odxml To Postman Json",
-        "CreatedOn": "2017-11-27T02:50:26.217",
-        "IsActive": true,
-        "CurrentRoutingKey": "amq.gen-038mgzT3ATTpDx-Ekoww0w",
-        "LowerName": "odxmltopostmanjson",
-        "UpperName": "ODXMLTOPOSTMANJSON",
-        "LowerHyphenName": "odxml-to-postman-json",
-        "ReadMeMD": "Creates a REST Api Requests in a format ready to imported into Postman.",
-        "InputDescriptionMD": "param name=\"project-name\" select=\"'REST Collection'\"  \r\nparam name=\"api-uri\" select=\"'http://localhost:64110/api/'\"\r\n",
-        "InputFileTypeId": "33de424c-cfe0-498e-ae70-44da375a8fb2",
-        "OutputFileTypeId": "e827499f-f215-4b35-8dae-6bd423a75e4c",
-        "TranspileRequests": [],
-        "TranspilerInstances": [],
-        "TranspilerVersions": [
-          {
-            "TranspilerVersionId": "2f392ff2-3095-4932-8793-b518eeedf41e",
-            "TranspilerId": "ee1dc0b2-dc87-4e0f-bcb1-ade46b09de41",
-            "Name": "v1",
-            "CreatedOn": "2017-11-27T02:50:47.877",
-            "IsActive": true,
-            "TranspilerFileTypeId_TranspilerInputHints": [],
-            "TranspilerInstances": [],
-            "ReplacedByTranspilerVersionId_TranspilerVersions": []
-          }
-        ]
-      },
-      "CLIHandler": {
-        "inputFileContents": null,
-        "transpiler": "odxml-to-postman-json",
-        "inputFileSetXml": "",
-        "args": null,
-        "commandLine": "odxml42/odxml-to-postman-json -i ..\\ODXML\\DataSchema.odxml -p api-uri=http://localhost:64110/api",
-        "AccountHolder": null,
-        "CoordinatorProxy": null,
-        "FileSet": {
-          "FileSetId": "3b56777c-a03b-4db4-85b1-3c0ab148b4c5",
-          "FileSetFiles": [
-            {
-              "OriginalRelativePath": null,
-              "RelativePath": "DataSchema.odxml"
-            }
-          ]
-        },
-        "HasRemainingArguments": true,
-        "ZFSFileSetFile": null,
-        "SSoTmeProject": null,
-        "ParseResult": 0,
-        "OutputFileSet": null,
-        "SuppressTranspile": false,
-        "help": false,
-        "init": false,
-        "install": false,
-        "uninstall": false,
-        "build": false,
-        "buildAll": false,
-        "describe": false,
-        "descibeAll": false,
-        "input": [
-          "..\\ODXML\\DataSchema.odxml"
-        ],
-        "output": null,
-        "clean": false,
-        "cleanAll": false,
-        "skipClean": false,
-        "account": "odxml42",
-        "parameters": [
-          "api-uri=http://localhost:64110/api",
-          "project-name=HomeworkPlus"
-        ],
-        "listSettings": false,
-        "addSetting": [],
-        "removeSetting": [],
-        "keyFile": null,
-        "emailAddress": null,
-        "secret": null,
-        "addTranspiler": null,
-        "deleteTranspiler": null,
-        "waitTimeout": 30000,
-        "runAs": null,
-        "preserveZFS": false,
-        "checkResults": false,
-        "createDocs": false,
-        "execute": null,
-        "includeDisabled": false,
-        "projectName": null,
-        "transpilerGroup": null
-      },
-      "ProjectTranspilerId": "fc24e1c5-23bf-437c-bb9c-99ad3250971f",
-      "Name": "OdxmlToPostmanJson",
-      "RelativePath": "/PostMan",
-      "CommandLine": "odxml42/odxml-to-postman-json -i ..\\ODXML\\DataSchema.odxml -p api-uri=http://localhost:64110/api"
     },
     {
       "MatchedTranspiler": {
@@ -1036,7 +1076,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "2d847239-6eb5-4627-a28f-7f24259a0899",
+          "FileSetId": "9222c36f-6048-4c5e-8caf-cf6e4ec20305",
           "FileSetFiles": [
             {
               "OriginalRelativePath": null,
@@ -1092,7 +1132,10 @@
         "execute": null,
         "includeDisabled": false,
         "projectName": null,
-        "transpilerGroup": null
+        "transpilerGroup": null,
+        "setAccountAPIKey": null,
+        "authenticate": false,
+        "register": false
       },
       "ProjectTranspilerId": "c63763f1-3137-4465-8877-63fc5393b292",
       "Name": "IonicStatesFromAppStatesXml",
@@ -1138,7 +1181,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "1493291c-a407-4fc9-94a1-8250970bcbc9",
+          "FileSetId": "cbdf6909-edb3-47a6-8602-24a2c10b7587",
           "FileSetFiles": [
             {
               "OriginalRelativePath": null,
@@ -1151,7 +1194,7 @@
         "SSoTmeProject": null,
         "ParseResult": 0,
         "OutputFileSet": {
-          "FileSetId": "bacbda5f-2490-46ae-86a7-3f0b3cb6ebd5",
+          "FileSetId": "5fa24027-ee52-487c-9005-0f68ab54cf54",
           "FileSetFiles": [
             {
               "OriginalRelativePath": "ionic2-ts-sidemenu1/src/providers/rest-api-service.ts",
@@ -1196,12 +1239,115 @@
         "execute": null,
         "includeDisabled": false,
         "projectName": null,
-        "transpilerGroup": null
+        "transpilerGroup": null,
+        "setAccountAPIKey": null,
+        "authenticate": false,
+        "register": false
       },
       "ProjectTranspilerId": "593a6196-803c-49d6-9732-b2ef074bdeb8",
       "Name": "XmlXsltTransform",
       "RelativePath": "/ionic2-ts-sidemenu1/src/providers",
       "CommandLine": "odxml42/odxml-to-angular-rest-api  -i ..\\..\\..\\ODXML\\DataSchema.odxml"
+    },
+    {
+      "MatchedTranspiler": {
+        "TranspilerId": "cf9074b7-4448-474a-adb6-cfffc0911e6c",
+        "Name": "SmqlToCSharpRabbitMQ",
+        "DisplayName": "Smql To C Sharp Rabbit M Q",
+        "Description": "Smql To CSharp RabbitMQ",
+        "CreatedOn": "2017-09-15T22:13:19.003",
+        "IsActive": true,
+        "CurrentRoutingKey": "amq.gen-0dlmenmzFCebAz5mrtILxw",
+        "LowerName": "smqltocsharprabbitmq",
+        "UpperName": "SMQLTOCSHARPRABBITMQ",
+        "LowerHyphenName": "smql-to-c-sharp-rabbit-m-q",
+        "ReadMeMD": "Parameters:\r\n - acronym = \"/SMQLexicon/Acronym\" \r\n - payload-type = concat($acronym, 'Payload')\r\n - actor-base-type = concat($acronym, 'ActorBase')\r\n",
+        "InputFileTypeId": "87c1c579-ea4f-47db-a064-f26f9ca1d91e",
+        "OutputFileTypeId": "47f5fc9f-0c22-4f73-8d18-0544a7f05d7b",
+        "Category": "rabbitmq",
+        "IsRecommended": true,
+        "TranspileRequests": [],
+        "TranspilerInstances": [],
+        "TranspilerVersions": [
+          {
+            "TranspilerVersionId": "b189ce7b-4086-4575-b89d-aafcbe02bba9",
+            "TranspilerId": "cf9074b7-4448-474a-adb6-cfffc0911e6c",
+            "Name": "v1",
+            "CreatedOn": "2017-09-15T22:13:25.117",
+            "IsActive": true,
+            "TranspilerFileTypeId_TranspilerInputHints": [],
+            "TranspilerInstances": [],
+            "ReplacedByTranspilerVersionId_TranspilerVersions": []
+          }
+        ]
+      },
+      "CLIHandler": {
+        "inputFileContents": null,
+        "transpiler": "smql-to-csharp-rabbit",
+        "inputFileSetXml": "",
+        "args": null,
+        "commandLine": "sassymq/smql-to-csharp-rabbit -i ..\\..\\SassyMQ\\SassyMQLexicon.smql",
+        "AccountHolder": null,
+        "CoordinatorProxy": null,
+        "FileSet": {
+          "FileSetId": "4d0cb388-ac72-47f2-af69-25a29106f116",
+          "FileSetFiles": [
+            {
+              "OriginalRelativePath": null,
+              "RelativePath": "SassyMQLexicon.smql"
+            }
+          ]
+        },
+        "HasRemainingArguments": true,
+        "ZFSFileSetFile": null,
+        "SSoTmeProject": null,
+        "ParseResult": 0,
+        "OutputFileSet": null,
+        "SuppressTranspile": false,
+        "help": false,
+        "init": false,
+        "install": false,
+        "uninstall": false,
+        "build": false,
+        "buildAll": false,
+        "describe": false,
+        "descibeAll": false,
+        "input": [
+          "..\\..\\SassyMQ\\SassyMQLexicon.smql"
+        ],
+        "output": null,
+        "clean": false,
+        "cleanAll": false,
+        "skipClean": false,
+        "account": "sassymq",
+        "parameters": [
+          "project-name=HomeworkPlus"
+        ],
+        "listSettings": false,
+        "addSetting": [],
+        "removeSetting": [],
+        "keyFile": null,
+        "emailAddress": null,
+        "secret": null,
+        "addTranspiler": null,
+        "deleteTranspiler": null,
+        "waitTimeout": 30000,
+        "runAs": null,
+        "preserveZFS": false,
+        "checkResults": false,
+        "createDocs": false,
+        "execute": null,
+        "includeDisabled": false,
+        "projectName": null,
+        "transpilerGroup": null,
+        "setAccountAPIKey": null,
+        "authenticate": false,
+        "register": false
+      },
+      "ProjectTranspilerId": "2ca700b0-4016-4b0d-83f4-8c6d62897975",
+      "Name": "SmqlToCSharpRabbitMQ",
+      "RelativePath": "/CoreLibrary/SassyMQ",
+      "CommandLine": "sassymq/smql-to-csharp-rabbit -i ..\\..\\SassyMQ\\SassyMQLexicon.smql"
     },
     {
       "MatchedTranspiler": {
@@ -1246,7 +1392,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "8078f52a-81a5-439c-9db0-a46cf45ee0bb",
+          "FileSetId": "86135433-570c-4c10-9771-a956674056da",
           "FileSetFiles": [
             {
               "OriginalRelativePath": null,
@@ -1295,7 +1441,10 @@
         "execute": null,
         "includeDisabled": false,
         "projectName": null,
-        "transpilerGroup": null
+        "transpilerGroup": null,
+        "setAccountAPIKey": null,
+        "authenticate": false,
+        "register": false
       },
       "ProjectTranspilerId": "12618fae-4b16-4f6c-bc17-8799e034a897",
       "Name": "OdxmlToCSharpSqlDataManager",
@@ -1344,7 +1493,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "bbdab9b6-5835-4b13-ac41-28fcd11c2d60",
+          "FileSetId": "cad12843-e1fd-4f10-bde1-2a75b28f143c",
           "FileSetFiles": [
             {
               "OriginalRelativePath": null,
@@ -1402,7 +1551,10 @@
         "execute": null,
         "includeDisabled": false,
         "projectName": null,
-        "transpilerGroup": null
+        "transpilerGroup": null,
+        "setAccountAPIKey": null,
+        "authenticate": false,
+        "register": false
       },
       "ProjectTranspilerId": "6a143376-da3b-4283-9295-43cb4c0c49f1",
       "Name": "OdxmlToCSharpPOCOs",
@@ -1448,7 +1600,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "02978860-a6a0-437f-89f8-ead9eec465f5",
+          "FileSetId": "71e5d12a-c5c6-442a-9d0e-6ae66da45f66",
           "FileSetFiles": [
             {
               "OriginalRelativePath": null,
@@ -1497,7 +1649,10 @@
         "execute": null,
         "includeDisabled": false,
         "projectName": null,
-        "transpilerGroup": null
+        "transpilerGroup": null,
+        "setAccountAPIKey": null,
+        "authenticate": false,
+        "register": false
       },
       "ProjectTranspilerId": "29d86f86-3119-4fd7-8893-5514bdc33250",
       "Name": "OdxmlToMVCRESTAPI",
@@ -1544,7 +1699,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "4e5b0282-448a-4915-8806-0a494554734d",
+          "FileSetId": "2e873c53-f5c5-41b6-a7f5-f32574dd57bb",
           "FileSetFiles": [
             {
               "OriginalRelativePath": null,
@@ -1593,7 +1748,10 @@
         "execute": null,
         "includeDisabled": false,
         "projectName": null,
-        "transpilerGroup": null
+        "transpilerGroup": null,
+        "setAccountAPIKey": null,
+        "authenticate": false,
+        "register": false
       },
       "ProjectTranspilerId": "9a6d919d-04f9-48d1-9ee8-c651becc4332",
       "Name": "SmqlToRabbitMQConfig",
@@ -1644,7 +1802,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "7da891d7-118a-41bd-94b7-b4bbd384a847",
+          "FileSetId": "44c7c08c-5623-411a-80fe-bf2f7dc8579c",
           "FileSetFiles": []
         },
         "HasRemainingArguments": false,
@@ -1686,207 +1844,16 @@
         "execute": ".\\UpdateSassyMQ.bat",
         "includeDisabled": false,
         "projectName": null,
-        "transpilerGroup": null
+        "transpilerGroup": null,
+        "setAccountAPIKey": null,
+        "authenticate": false,
+        "register": false
       },
       "ProjectTranspilerId": "ad5a7c2e-efea-4ee9-88c9-1469fcc390ec",
       "Name": "ToUpperCase",
       "RelativePath": "/SassyMQ/Config",
       "CommandLine": "-exec .\\UpdateSassyMQ.bat",
       "IsDisabled": true
-    },
-    {
-      "MatchedTranspiler": {
-        "TranspilerId": "69a746d2-c0b1-4467-a020-9dd12b8bc098",
-        "Name": "SmqlToDocs",
-        "DisplayName": "Smql To Docs",
-        "Description": "Converts an Smql file into documentation.",
-        "CreatedOn": "2017-09-16T22:24:50.93",
-        "IsActive": true,
-        "CurrentRoutingKey": "amq.gen-SO2KYSw3nYNV1LPUOAPf8w",
-        "LowerName": "smqltodocs",
-        "UpperName": "SMQLTODOCS",
-        "LowerHyphenName": "smql-to-docs",
-        "ExampleMD": "ssotme sassymq/SmqlToDocs -i .\\HelloWorld.smql",
-        "InputFileTypeId": "87c1c579-ea4f-47db-a064-f26f9ca1d91e",
-        "OutputFileTypeId": "d8fc84b7-442d-4c7a-92a0-eefc11391934",
-        "Category": "sassymq",
-        "IsRecommended": true,
-        "TranspileRequests": [],
-        "TranspilerInstances": [],
-        "TranspilerVersions": [
-          {
-            "TranspilerVersionId": "ea02027b-b8a4-4d73-ab46-c7d722c0cc38",
-            "TranspilerId": "69a746d2-c0b1-4467-a020-9dd12b8bc098",
-            "Name": "v1",
-            "CreatedOn": "2017-09-16T22:25:01.583",
-            "IsActive": true,
-            "TranspilerFileTypeId_TranspilerInputHints": [],
-            "TranspilerInstances": [],
-            "ReplacedByTranspilerVersionId_TranspilerVersions": []
-          }
-        ]
-      },
-      "CLIHandler": {
-        "inputFileContents": null,
-        "transpiler": "smql-to-docs",
-        "inputFileSetXml": "",
-        "args": null,
-        "commandLine": "sassymq/smql-to-docs -i ..\\SassyMQLexicon.smql",
-        "AccountHolder": null,
-        "CoordinatorProxy": null,
-        "FileSet": {
-          "FileSetId": "1db92c27-583f-47c4-8b64-c75a444444bb",
-          "FileSetFiles": [
-            {
-              "OriginalRelativePath": null,
-              "RelativePath": "SassyMQLexicon.smql"
-            }
-          ]
-        },
-        "HasRemainingArguments": true,
-        "ZFSFileSetFile": null,
-        "SSoTmeProject": null,
-        "ParseResult": 0,
-        "OutputFileSet": null,
-        "SuppressTranspile": false,
-        "help": false,
-        "init": false,
-        "install": false,
-        "uninstall": false,
-        "build": false,
-        "buildAll": false,
-        "describe": false,
-        "descibeAll": false,
-        "input": [
-          "..\\SassyMQLexicon.smql"
-        ],
-        "output": null,
-        "clean": false,
-        "cleanAll": false,
-        "skipClean": false,
-        "account": "sassymq",
-        "parameters": [
-          "project-name=HomeworkPlus"
-        ],
-        "listSettings": false,
-        "addSetting": [],
-        "removeSetting": [],
-        "keyFile": null,
-        "emailAddress": null,
-        "secret": null,
-        "addTranspiler": null,
-        "deleteTranspiler": null,
-        "waitTimeout": 30000,
-        "runAs": null,
-        "preserveZFS": false,
-        "checkResults": false,
-        "createDocs": false,
-        "execute": null,
-        "includeDisabled": false,
-        "projectName": null,
-        "transpilerGroup": null
-      },
-      "ProjectTranspilerId": "3249face-0994-46fd-a189-6ea68850fd00",
-      "Name": "SmqlToDocs",
-      "RelativePath": "/SassyMQ/Docs",
-      "CommandLine": "sassymq/smql-to-docs -i ..\\SassyMQLexicon.smql"
-    },
-    {
-      "MatchedTranspiler": {
-        "TranspilerId": "cf9074b7-4448-474a-adb6-cfffc0911e6c",
-        "Name": "SmqlToCSharpRabbitMQ",
-        "DisplayName": "Smql To C Sharp Rabbit M Q",
-        "Description": "Smql To CSharp RabbitMQ",
-        "CreatedOn": "2017-09-15T22:13:19.003",
-        "IsActive": true,
-        "CurrentRoutingKey": "amq.gen-0dlmenmzFCebAz5mrtILxw",
-        "LowerName": "smqltocsharprabbitmq",
-        "UpperName": "SMQLTOCSHARPRABBITMQ",
-        "LowerHyphenName": "smql-to-c-sharp-rabbit-m-q",
-        "ReadMeMD": "Parameters:\r\n - acronym = \"/SMQLexicon/Acronym\" \r\n - payload-type = concat($acronym, 'Payload')\r\n - actor-base-type = concat($acronym, 'ActorBase')\r\n",
-        "InputFileTypeId": "87c1c579-ea4f-47db-a064-f26f9ca1d91e",
-        "OutputFileTypeId": "47f5fc9f-0c22-4f73-8d18-0544a7f05d7b",
-        "Category": "rabbitmq",
-        "IsRecommended": true,
-        "TranspileRequests": [],
-        "TranspilerInstances": [],
-        "TranspilerVersions": [
-          {
-            "TranspilerVersionId": "b189ce7b-4086-4575-b89d-aafcbe02bba9",
-            "TranspilerId": "cf9074b7-4448-474a-adb6-cfffc0911e6c",
-            "Name": "v1",
-            "CreatedOn": "2017-09-15T22:13:25.117",
-            "IsActive": true,
-            "TranspilerFileTypeId_TranspilerInputHints": [],
-            "TranspilerInstances": [],
-            "ReplacedByTranspilerVersionId_TranspilerVersions": []
-          }
-        ]
-      },
-      "CLIHandler": {
-        "inputFileContents": null,
-        "transpiler": "smql-to-csharp-rabbit",
-        "inputFileSetXml": "",
-        "args": null,
-        "commandLine": "sassymq/smql-to-csharp-rabbit -i ..\\..\\SassyMQ\\SassyMQLexicon.smql",
-        "AccountHolder": null,
-        "CoordinatorProxy": null,
-        "FileSet": {
-          "FileSetId": "e64b4167-81c5-4506-94e3-138a24634d1d",
-          "FileSetFiles": [
-            {
-              "OriginalRelativePath": null,
-              "RelativePath": "SassyMQLexicon.smql"
-            }
-          ]
-        },
-        "HasRemainingArguments": true,
-        "ZFSFileSetFile": null,
-        "SSoTmeProject": null,
-        "ParseResult": 0,
-        "OutputFileSet": null,
-        "SuppressTranspile": false,
-        "help": false,
-        "init": false,
-        "install": false,
-        "uninstall": false,
-        "build": false,
-        "buildAll": false,
-        "describe": false,
-        "descibeAll": false,
-        "input": [
-          "..\\..\\SassyMQ\\SassyMQLexicon.smql"
-        ],
-        "output": null,
-        "clean": false,
-        "cleanAll": false,
-        "skipClean": false,
-        "account": "sassymq",
-        "parameters": [
-          "project-name=HomeworkPlus"
-        ],
-        "listSettings": false,
-        "addSetting": [],
-        "removeSetting": [],
-        "keyFile": null,
-        "emailAddress": null,
-        "secret": null,
-        "addTranspiler": null,
-        "deleteTranspiler": null,
-        "waitTimeout": 30000,
-        "runAs": null,
-        "preserveZFS": false,
-        "checkResults": false,
-        "createDocs": false,
-        "execute": null,
-        "includeDisabled": false,
-        "projectName": null,
-        "transpilerGroup": null
-      },
-      "ProjectTranspilerId": "2ca700b0-4016-4b0d-83f4-8c6d62897975",
-      "Name": "SmqlToCSharpRabbitMQ",
-      "RelativePath": "/CoreLibrary/SassyMQ",
-      "CommandLine": "sassymq/smql-to-csharp-rabbit -i ..\\..\\SassyMQ\\SassyMQLexicon.smql"
     },
     {
       "MatchedTranspiler": {
@@ -1930,7 +1897,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "b230a1b4-2ade-46fd-b6bc-05253c6ea749",
+          "FileSetId": "60661581-3cf9-459d-88cd-183720545fb1",
           "FileSetFiles": [
             {
               "OriginalRelativePath": null,
@@ -1981,12 +1948,119 @@
         "execute": null,
         "includeDisabled": false,
         "projectName": null,
-        "transpilerGroup": null
+        "transpilerGroup": null,
+        "setAccountAPIKey": null,
+        "authenticate": false,
+        "register": false
       },
       "ProjectTranspilerId": "9d5a8dd9-2c83-493d-90f1-57c1d0d58ebe",
       "Name": "SmqlToTypeScriptRabbitMQ",
       "RelativePath": "/ionic2-ts-sidemenu1/src/providers/sassymq",
       "CommandLine": "sassymq/smql-to-typescript -i ..\\..\\..\\..\\SassyMQ\\SassyMQLexicon.smql -p app-config-path=../../app/app.config  -p app-state-path=../../app/app.state"
+    },
+    {
+      "MatchedTranspiler": {
+        "TranspilerId": "4b713f03-1d9f-42f2-b02f-e3cdbd237bb3",
+        "AccountHolderId": "1e876e4f-d63b-4698-bd68-3bc27876e41e",
+        "Name": "XmlXsltTransform",
+        "DisplayName": "Xml Xslt Transform",
+        "Description": "Given an Xml and Xslt file, will process and \"split\" a resulting fileset.",
+        "CreatedOn": "2017-08-30T15:45:09.907",
+        "IsActive": true,
+        "CurrentRoutingKey": "amq.gen-pwRUdyqwEq8fPN8gkK7ADg",
+        "LowerName": "xmlxslttransform",
+        "UpperName": "XMLXSLTTRANSFORM",
+        "LowerHyphenName": "xml-xslt-transform",
+        "ReadMeMD": "The tool processes the first text file it finds (which is presumed to be in xml format), with the first Xslt file provided, and includes any parameters that are passed to ssotme as well.\r\n\r\nThe output is expected to be a FileSet Xml blob with the results of the transform.",
+        "InputDescriptionMD": "At least 1 input Xml file, An Xslt file to use for the Transform operation and any additional parameters that the Xslt file uses for it's transpiling functionality.  These could be options, values, namespaces, etc.",
+        "OutputDescriptionMD": "A fileset with the result of the Xslt transform, usually including at least 1 or more files.  The example command might produce an HTML Document that describes (in english) the contents of the Xml file.  Essentially a \"report\" about the xml file. ",
+        "ExampleMD": "ssotme -install xml-xslt-transform -i MyData.xml -i CreateDocs.xslt",
+        "InputFileTypeId": "f1b92a2a-3f83-4000-9b37-57f920e14419",
+        "OutputFileTypeId": "952e47eb-3448-4627-8dc4-93dab494c957",
+        "Category": "type-conversion",
+        "IsRecommended": true,
+        "TranspileRequests": [],
+        "TranspilerInstances": [],
+        "TranspilerVersions": [
+          {
+            "TranspilerVersionId": "7e941388-752b-4b0f-9631-939b790be10f",
+            "TranspilerId": "4b713f03-1d9f-42f2-b02f-e3cdbd237bb3",
+            "Name": "v1",
+            "CreatedOn": "2017-08-30T15:45:10.653",
+            "IsActive": true,
+            "TranspilerFileTypeId_TranspilerInputHints": [],
+            "TranspilerInstances": [],
+            "ReplacedByTranspilerVersionId_TranspilerVersions": []
+          }
+        ]
+      },
+      "CLIHandler": {
+        "inputFileContents": null,
+        "transpiler": "xml-xslt-transform",
+        "inputFileSetXml": "",
+        "args": null,
+        "commandLine": "xml-xslt-transform -i .\\CreateDefaultFiles.xslt",
+        "AccountHolder": null,
+        "CoordinatorProxy": null,
+        "FileSet": {
+          "FileSetId": "fae8377e-a101-4368-a246-5013873795b7",
+          "FileSetFiles": [
+            {
+              "OriginalRelativePath": "/CustomTools/CreateDefaultFiles.xslt",
+              "RelativePath": "CreateDefaultFiles.xslt"
+            }
+          ]
+        },
+        "HasRemainingArguments": true,
+        "ZFSFileSetFile": null,
+        "SSoTmeProject": null,
+        "ParseResult": 0,
+        "OutputFileSet": null,
+        "SuppressTranspile": false,
+        "help": false,
+        "init": false,
+        "install": false,
+        "uninstall": false,
+        "build": false,
+        "buildAll": false,
+        "describe": false,
+        "descibeAll": false,
+        "input": [
+          ".\\CreateDefaultFiles.xslt"
+        ],
+        "output": null,
+        "clean": false,
+        "cleanAll": false,
+        "skipClean": false,
+        "account": "",
+        "parameters": [
+          "project-name=HomeworkPlus"
+        ],
+        "listSettings": false,
+        "addSetting": [],
+        "removeSetting": [],
+        "keyFile": null,
+        "emailAddress": null,
+        "secret": null,
+        "addTranspiler": null,
+        "deleteTranspiler": null,
+        "waitTimeout": 30000,
+        "runAs": null,
+        "preserveZFS": false,
+        "checkResults": false,
+        "createDocs": false,
+        "execute": null,
+        "includeDisabled": false,
+        "projectName": null,
+        "transpilerGroup": null,
+        "setAccountAPIKey": null,
+        "authenticate": false,
+        "register": false
+      },
+      "ProjectTranspilerId": "1a2b18ff-c654-4752-9a20-4d05cebb4687",
+      "Name": "XmlXsltTransform",
+      "RelativePath": "/CustomTools",
+      "CommandLine": "xml-xslt-transform -i .\\CreateDefaultFiles.xslt"
     },
     {
       "MatchedTranspiler": null,
@@ -1999,7 +2073,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "8cae6f51-1f0d-44a9-913d-3ddbb7c184f7",
+          "FileSetId": "e9f52900-93e8-4c72-8be0-09e00f85fc36",
           "FileSetFiles": []
         },
         "HasRemainingArguments": false,
@@ -2041,7 +2115,10 @@
         "execute": null,
         "includeDisabled": false,
         "projectName": null,
-        "transpilerGroup": null
+        "transpilerGroup": null,
+        "setAccountAPIKey": null,
+        "authenticate": false,
+        "register": false
       },
       "ProjectTranspilerId": "1ef41254-d656-47f5-bf7d-688fa97fb8b1",
       "Name": "LocalCommand",
@@ -2092,7 +2169,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "4e2be8ac-c018-4a54-8800-c09643226577",
+          "FileSetId": "43a08ef0-308b-4428-9340-7a231791c46b",
           "FileSetFiles": [
             {
               "OriginalRelativePath": "/DSPXml/SSoTmeProject.spxml",
@@ -2141,7 +2218,10 @@
         "execute": null,
         "includeDisabled": false,
         "projectName": null,
-        "transpilerGroup": null
+        "transpilerGroup": null,
+        "setAccountAPIKey": null,
+        "authenticate": false,
+        "register": false
       },
       "ProjectTranspilerId": "58dca1ce-dd8f-42d0-b041-6914df54e819",
       "Name": "SPXmlToDetailedSPXml",
@@ -2189,7 +2269,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "94898e21-1047-477f-befe-df8ac0199091",
+          "FileSetId": "66062653-2523-4475-aed5-54512e414141",
           "FileSetFiles": [
             {
               "OriginalRelativePath": null,
@@ -2238,122 +2318,15 @@
         "execute": null,
         "includeDisabled": false,
         "projectName": null,
-        "transpilerGroup": null
+        "transpilerGroup": null,
+        "setAccountAPIKey": null,
+        "authenticate": false,
+        "register": false
       },
       "ProjectTranspilerId": "27bd8288-d51f-42ca-b580-c3a71279805c",
       "Name": "DetailedSPXmlToHtmlDocs",
       "RelativePath": "/DSPXml",
       "CommandLine": "detailed-spxml-to-html -i .\\SSoTmeProject.dspxml"
-    },
-    {
-      "MatchedTranspiler": {
-        "TranspilerId": "1cbd15d4-18df-47a8-8a08-83d9544baa11",
-        "AccountHolderId": "c2bb89f9-26da-4ebf-9d35-0c4547eb89e2",
-        "Name": "AirtableXmlToSqlServerUpsert",
-        "DisplayName": "Airtable Xml To Sql Server Upsert",
-        "Description": "Creates a SQL Server script to update/insert data (or static data) from the airtable db.",
-        "CreatedOn": "2018-04-12T21:36:05.25",
-        "IsActive": true,
-        "CurrentRoutingKey": "",
-        "LowerName": "airtablexmltosqlserverupsert",
-        "UpperName": "AIRTABLEXMLTOSQLSERVERUPSERT",
-        "LowerHyphenName": "airtable-xml-to-sql-server-upsert",
-        "InputDescriptionMD": "-p only-static-table=true\r\n   to only include entities marked as IsStaticData",
-        "InputFileTypeId": "8c1bfcc6-a4de-4604-b785-9aa677c5302a",
-        "OutputFileTypeId": "1136a8fc-7ced-47c2-b08d-1ff447a82b01",
-        "TranspileRequests": [],
-        "TranspilerInstances": [],
-        "TranspilerVersions": [
-          {
-            "TranspilerVersionId": "928d5e06-9cc1-4ad4-ab67-5998a63bf68e",
-            "TranspilerId": "1cbd15d4-18df-47a8-8a08-83d9544baa11",
-            "Name": "v1",
-            "CreatedOn": "2018-04-12T21:36:07.233",
-            "IsActive": true,
-            "TranspilerFileTypeId_TranspilerInputHints": [],
-            "TranspilerInstances": [],
-            "ReplacedByTranspilerVersionId_TranspilerVersions": []
-          }
-        ]
-      },
-      "CLIHandler": {
-        "inputFileContents": null,
-        "transpiler": "airtable-xml-to-sql-server-upsert",
-        "inputFileSetXml": "",
-        "args": null,
-        "commandLine": "airtable/airtable-xml-to-sql-server-upsert -i ..\\SSoT\\Airtable.xml -i ..\\ODXML\\DataSchema.odxml",
-        "AccountHolder": null,
-        "CoordinatorProxy": null,
-        "FileSet": {
-          "FileSetId": "01069228-49b1-4190-b49c-ca23c479772e",
-          "FileSetFiles": [
-            {
-              "OriginalRelativePath": null,
-              "RelativePath": "Airtable.xml"
-            },
-            {
-              "OriginalRelativePath": null,
-              "RelativePath": "DataSchema.odxml"
-            }
-          ]
-        },
-        "HasRemainingArguments": true,
-        "ZFSFileSetFile": null,
-        "SSoTmeProject": null,
-        "ParseResult": 0,
-        "OutputFileSet": {
-          "FileSetId": "4b333581-2fb4-4f03-8b75-5a888f8dadaf",
-          "FileSetFiles": [
-            {
-              "OriginalRelativePath": "SqlServer/UpsertStaticData.sql",
-              "RelativePath": "UpsertStaticData.sql",
-              "AlwaysOverwrite": true
-            }
-          ]
-        },
-        "SuppressTranspile": false,
-        "help": false,
-        "init": false,
-        "install": false,
-        "uninstall": false,
-        "build": false,
-        "buildAll": false,
-        "describe": false,
-        "descibeAll": false,
-        "input": [
-          "..\\SSoT\\Airtable.xml",
-          "..\\ODXML\\DataSchema.odxml"
-        ],
-        "output": null,
-        "clean": false,
-        "cleanAll": false,
-        "skipClean": false,
-        "account": "airtable",
-        "parameters": [
-          "project-name=HomeworkPlus"
-        ],
-        "listSettings": false,
-        "addSetting": [],
-        "removeSetting": [],
-        "keyFile": null,
-        "emailAddress": null,
-        "secret": null,
-        "addTranspiler": null,
-        "deleteTranspiler": null,
-        "waitTimeout": 30000,
-        "runAs": null,
-        "preserveZFS": false,
-        "checkResults": false,
-        "createDocs": false,
-        "execute": null,
-        "includeDisabled": false,
-        "projectName": null,
-        "transpilerGroup": null
-      },
-      "ProjectTranspilerId": "a67640a3-4195-4098-a40d-11f47a13befe",
-      "Name": "AirtableXmlToSqlServerUpsert",
-      "RelativePath": "/SqlServer",
-      "CommandLine": "airtable/airtable-xml-to-sql-server-upsert -i ..\\SSoT\\Airtable.xml -i ..\\ODXML\\DataSchema.odxml"
     }
   ]
 }
